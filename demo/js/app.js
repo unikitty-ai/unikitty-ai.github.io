@@ -9,7 +9,7 @@ SERVER_PROTO = 'wss';
 SERVER_DOMAIN = 'api-ws.api.ai';
 TTS_DOMAIN = 'api.api.ai';
 SERVER_PORT = '4435';
-ACCESS_TOKEN = '00000000000000000000000000000000';
+ACCESS_TOKEN = 'dbe24bc5913e45b5843b9562edd882c6';
 SERVER_VERSION = '20150910';
 
 window.onload = function () {
