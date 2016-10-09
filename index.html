@@ -2,7 +2,7 @@
 <head>
 	<title>uniKitty</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		var accessToken = "dbe24bc5913e45b5843b9562edd882c6";
 		var baseUrl = "https://api.api.ai/v1/";
@@ -80,7 +80,8 @@
 			setResponse("Loading...");
 		}
 		function setResponse(val) {
-			$("#response").text(val);
+			var kitty=JSON.parse(val);
+			$("#response").text(kitty.action);
 		}
 	</script>
 	<style type="text/css">
