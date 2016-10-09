@@ -1,8 +1,8 @@
 <html>
 <head>
-	<title>uniKitty</title>
+	<title>Uni Kitty</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		var accessToken = "dbe24bc5913e45b5843b9562edd882c6";
 		var baseUrl = "https://api.api.ai/v1/";
@@ -71,7 +71,8 @@
 				},
 				data: JSON.stringify({ q: text, lang: "en" }),
 				success: function(data) {
-					setResponse(JSON.stringify(data, undefined, 2));
+				//	setResponse(JSON.stringify(data.result.action, undefined, 2));
+					setResponse(data.result.fulfillment.speech);
 				},
 				error: function() {
 					setResponse("Internal Server Error");
@@ -80,8 +81,7 @@
 			setResponse("Loading...");
 		}
 		function setResponse(val) {
-			var kitty=JSON.parse(val);
-			$("#response").text(kitty.action);
+			$("#response").text(val);
 		}
 	</script>
 	<style type="text/css">
